@@ -1,0 +1,61 @@
+<html>
+ 
+<head>
+<style>
+td {
+color : #383436 ;
+font-weight : bold;
+}
+</style>
+<script>
+function cuadrado(){
+var a=document.getElementById("b").value;
+var b=document.getElementById("altu").value;
+var area=a*b;
+alert("El area es: "+area);
+}
+function triangulo(){
+var a=document.getElementById("b2").value;
+var b=document.getElementById("altur").value;
+var area=(a*b)/2;
+alert("El area es: "+area);
+}
+function circulo(){
+var a=document.getElementById("r").value;
+var area=3.14*a*a;
+alert("El area es: "+area);
+}
+</script>
+</head>
+ 
+<body>
+<center>
+<div  style="position:absolute;top:50px;left:100px;width:900px;height:200px;">
+<img src="banner4.jpg" width="100%" height="200px" />
+</div>
+<div style="position:absolute;top:260px;left:100px;width:900px;heigth:200px;background-color:#DDE9A0">
+<table width="900" border="1">
+<tr><td width="30%" align="center"><img src="rectangulo.png" width="200"></td>
+<td><table>
+<tr><td>BASE<td><td><input type="text" id="b"></td></tr>
+<tr><td>ALTURA<td><td><input type="text" id="altu"></td></tr>
+<tr><td><td><td><input type="button" value="CALCULAR" onclick="cuadrado()"></td></tr>
+</td></table>
+<tr><td width="30%" align="center"><img src="triangulo.jpg" width="200"></td>
+<td><table>
+<tr><td>BASE<td><td><input type="text" id="b2"></td></tr>
+<tr><td>ALTURA<td><td><input type="text" id="altur"></td></tr>
+<tr><td><td><td><input type="button" value="CALCULAR" onclick="triangulo()"></td></tr>
+</td></table>
+<tr><td width="30%" align="center"><img src="circulo.jpg" width="200"></td>
+<td><table>
+<tr><td>RADIO<td><td><input type="text" id="r"></td></tr>
+<tr><td><td><td><input type="button" value="CALCULAR" onclick="circulo()"></td></tr>
+</td></table>
+</tr>
+</table>
+</div>
+<center>
+</body>
+ 
+</html>

@@ -1,0 +1,208 @@
+<html>
+
+<head>
+<script>
+function enviar(){
+
+var a=document.getElementById("search").value;
+var b=document.getElementById("pmin").value;
+var c=document.getElementById("pmax").value;
+var d=document.getElementById("tmin").value;
+var e=document.getElementById("tmax").value;
+var f=document.getElementById("tip1").checked;
+var g=document.getElementById("tip2").checked;
+var h=document.getElementById("tip3").checked;
+var i=document.getElementById("tip4").checked;
+var j=document.getElementById("hab1").checked;
+var k=document.getElementById("hab2").checked;
+var l=document.getElementById("hab3").checked;
+var m=document.getElementById("hab4").checked;
+var n=document.getElementById("b1").checked;
+var o=document.getElementById("b2").checked;
+var p=document.getElementById("b3").checked;
+var q=document.getElementById("equip").value;
+var r=document.getElementById("nueva").checked;
+var s=document.getElementById("buen").checked;
+var t=document.getElementById("refo").checked;
+
+
+cadena= "Busco: "+a+"\n";
+cadena=cadena+"Precio min: "+b+" €"+"\n";
+cadena=cadena+"Precio max: "+c+" €"+"\n";
+cadena=cadena+"Tamaño min: "+d+" m2"+"\n";
+cadena=cadena+"Tamaño max: "+e+" m2"+"\n";
+if (f==true){
+cadena=cadena+"Tipo de vivienda: Piso"+"\n";
+}
+if (g==true){
+cadena=cadena+"Tipo de vivienda: Casa"+"\n";
+}
+if (h==true){
+cadena=cadena+"Tipo de vivienda: Chalet"+"\n";
+}
+if (i==true){
+cadena=cadena+"Tipo de vivienda: Dúplex"+"\n";
+}
+if (j==true){
+cadena=cadena+"Número de habitaciones: 1"+"\n";
+}
+if (k==true){
+cadena=cadena+"Número de habitaciones: 2"+"\n";
+}
+if (l==true){
+cadena=cadena+"Número de habitaciones: 3"+"\n";
+}
+if (m==true){
+cadena=cadena+"Número de habitaciones: 4"+"\n";
+}
+if (n==true){
+cadena=cadena+"Número de baños: 1"+"\n";
+}
+if (o==true){
+cadena=cadena+"Número de baños: 2"+"\n";
+}
+if (p==true){
+cadena=cadena+"Número de baños: 3 o +"+"\n";
+}
+cadena=cadena+"Equipamiento: "+q+"\n";
+if (r==true){
+cadena=cadena+"Estado: obra nueva"+"\n";
+}
+if (s==true){
+cadena=cadena+"Estado: bueno"+"\n";
+}
+if (t==true){
+cadena=cadena+"Estado: necesita reforma"+"\n";
+}
+
+alert(cadena);
+
+}
+</script>
+</head>
+
+<body>
+<div  style="position:absolute;top:10px;left:300px;width:800px;height:200px">
+<img src="banner.jpg" width="100%" height="200px" />
+</div>
+<div  style="position:absolute;top:215px;left:300px;width:800px;height:200px">
+<table>
+<tr><td width="30%" valign="top">
+<table bgcolor="silver">
+<tr><td>Qué buscas</td></tr>
+<tr><td><select id="search" >
+<option value="Vivienda">Vivienda</option>
+<option value="Oficina">Oficina</option>
+<option value="Habitación">Habitación</option>
+<option value="Garaje">Garaje</option>
+</select></td></tr>
+<tr><td>Precio</td></tr>
+<tr><td><select id="pmin" >
+<option value="min">Min</option>
+<option value="150">150</option>
+<option value="250">250</option>
+<option value="350">350</option>
+<option value="450">450</option>
+</select></td>
+<td><select id="pmax" >
+<option value="max">Máx</option>
+<option value="150">150</option>
+<option value="250">250</option>
+<option value="350">350</option>
+<option value="450">450</option>
+</select></td></tr>
+<tr><td>Tamaño</td></tr>
+<tr><td><select id="tmin" >
+<option value="min">Min</option>
+<option value="40">40m2</option>
+<option value="60">60m2</option>
+<option value="80">80m2</option>
+<option value="100">100m2</option>
+</select></td>
+<td><select id="tmax" >
+<option value="max">Máx</option>
+<option value="40">40m2</option>
+<option value="60">60m2</option>
+<option value="80">80m2</option>
+<option value="100">100m2</option>
+</select></td></tr>
+<tr><td>Tipo de vivienda</td></tr>
+<tr><td><input type="checkbox" id="tip1" >Pisos<br>
+<input type="checkbox" id="tip2">Casas<br>
+<input type="checkbox" id="tip3">Chalets<br>
+<input type="checkbox" id="tip4">Dúplex<br>
+</td></tr>
+<tr><td>Habitaciones</td></tr>
+<tr><td><input type="checkbox" id="hab1" >1<br>
+<input type="checkbox" id="hab2">2<br>
+<input type="checkbox" id="hab3">3<br>
+<input type="checkbox" id="hab4">4<br>
+</td></tr>
+<tr><td>Baños</td></tr>
+<tr><td><input type="checkbox" id="b1" >1 
+<input type="checkbox" id="b2" >2 
+<input type="checkbox" id="b3" >3 o +
+</td></tr>
+<tr><td>Equipamiento</td></tr>
+<tr><td><select id="equip" >
+<option value="Indiferente">Indiferente</option>
+<option value="Solo cocina">Solo cocina</option>
+<option value="Amueblado">Amueblado</option>
+</select></td></tr>
+<tr><td>Estado</td></tr>
+<tr><td>
+<input type="checkbox" id="nueva">Obra nueva<br>
+<input type="checkbox" id="buen" >Buen estado<br>
+<input type="checkbox" id="refo" >A reformar<br>
+</td></tr>
+</table>
+<input type="button" value="ENVIAR" onClick="enviar()">
+</td>
+<td>
+<table>
+<tr><td width="30%"><img src="piso1.jpg" width="300" height="200"/></td>
+<td valign="top"><font color="blue" size="4" face="Tahoma">Piso Teatinos</font><br>
+<br>
+<font color="gray" size="3" face="Tahoma">3 hab. 85m2 2 baños Obra nueva</font><br>
+<br>
+<font color="silver" size="3" face="Tahoma">Fantástico piso en Teatinos cerca del campus</font><br>
+<br>
+<br>
+<br>
+<img src="tel.png" width="20" height="20"/>Teléfono: 952112233<img src="men.png" width="20" height="20"/>Contacto
+</td></tr>
+<tr><td width="30%"><img src="piso2.jpg" width="300" height="200"/></td>
+<td valign="top"><font color="blue" size="4" face="Tahoma">Piso en Bailen</font><br>
+<br>
+<font color="gray" size="3" face="Tahoma">1 hab. 89m2 2 baños Obra nueva</font><br>
+<br>
+<font color="silver" size="3" face="Tahoma">Fantástico piso amueblado con mucha luz</font><br>
+<br>
+<br>
+<br>
+<img src="tel.png" width="20" height="20"/>Teléfono: 952112233<img src="men.png" width="20" height="20"/>Contacto
+</td></tr>
+<tr><td width="30%"><img src="piso3.jpg" width="300" height="200"/></td>
+<td valign="top"><font color="blue" size="4" face="Tahoma">Piso en Ciudad Jardin</font><br>
+<br>
+<font color="gray" size="3" face="Tahoma">3 hab. 100m2 3 baños Obra nueva</font><br>
+<br>
+<font color="silver" size="3" face="Tahoma">Se alquila piso familiar en Ciudad Jardin</font><br>
+<br>
+<br>
+<br>
+<img src="tel.png" width="20" height="20"/>Teléfono: 952112233<img src="men.png" width="20" height="20"/>Contacto
+</td></tr>
+
+
+
+</table>
+
+
+
+</td></tr>
+</table>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+	td{
+		font-size: 20px;
+		font-family: Verdana;
+		align-items: center;
+		background-color: lime;
+		color: white;
+		font-style: normal;
+		text-align: center;
+	}
+
+	#td1{
+		background-color: white;
+	}
+		
+	</style>
+
+	<script type="text/javascript">
+		
+		var total=0;
+		function BUYNOW(precio){
+			total=total+parseInt(precio);
+			alert("Total de su compra: " + total + "€");
+
+		}
+
+		
+	</script>
+
+</head>
+<body><table width="90%" align="center">
+	<tr><td id="td1"><img src="banner_design.jpg"></td></tr>
+</table>
+	
+<table width="70%" align="center">
+	<tr>
+		<td> <img src="1.jpg" width="300"></td>
+		<td> <img src="2.jpeg" width="300"></td>
+		<td> <img src="3.jpg" width="300"></td>
+	</tr>
+	<tr>
+		<td> Disco 1 <br> 10€ <br> <img src="carrito.png" width="30" onclick="BUYNOW('10')"></td>
+		<td> Disco 2 <br> 15€ <br> <img src="carrito.png" width="30" onclick="BUYNOW('15')"></td>
+		<td> Disco 3 <br> 20€ <br> <img src="carrito.png" width="30" onclick="BUYNOW('20')"></td>
+	</tr> 
+	<tr>
+	
+	</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+	function mostrar(){
+		
+		var a=document.getElementById("DES").value;
+		var b=document.getElementById("ENT").value;
+		var c=document.getElementById("SAL").value;
+		var d=document.getElementById("ADU").value;
+		var e=document.getElementById("NIN").value;
+
+		cadena="DESTINO:"+ a + "\n";
+		cadena= cadena +"ENTRADA:"+ b + "\n";
+		cadena= cadena +"SALIDA:"+ c + "\n";
+		cadena= cadena +"Nº ADULTOS:"+ d + "\n";
+		cadena= cadena +"Nº NIÑOS:"+ e + "\n";
+
+		alert(cadena);
+	}	
+
+	</script>
+</head>
+<body>
+	<img src="banner.jpg" width="800">
+	
+		<table width="800">
+			<tr>
+				<td width="350"> 
+				<table>
+					<tr>
+				<img src="1.jpg" width="300" height="200"> <br>
+				<img src="2.jpg" width="300" height="200"> <br>
+				<img src="3.jpg" width="300" height="200"> <br>
+				</tr>
+				</table>
+				</td>
+
+				<td>
+					<table bgcolor="EFAD4E" width="300" height="60"1>
+						<tr>
+							<td>
+
+					DESTINO </td>
+					<td><select id="DES">
+
+						<option value="Málaga">Málaga</option>
+						<option value="Madrid">Madrid</option>
+						<option value="Touluse">Touluse</option>
+						<option value="Berlín">Berlín</option>
+						<option value="Dublín">Dublín</option>
+					</select> </td>
+					<tr><td> ENTRADA </td> <td> <input type="date" id="ENT"> <br> </td></tr>
+					<tr><td>SALIDA </td> <td> <input type="date" id="SAL"> <br> </td></tr>
+					<tr><td>Nº NIÑOS </td> <td> <input type="number" id="NIN"> <br> </td></tr>
+					<tr><td>Nº ADULTOS </td> <td> <input type="number" id="ADU"> <br> </td></tr>
+
+					<tr><td><input type="button" value="ENVIAR" onClick="mostrar()" name="">
+					</td></tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	
+
+</body>
+</html>

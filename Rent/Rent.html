@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+	function buscar(){
+		
+		var a=document.getElementById("MAR").value;
+		var b=document.getElementById("AÑO").value;
+		var c=document.getElementById("PRE").value;
+		
+
+		cadena="MARCA:"+ a + "\n";
+		cadena= cadena +"AÑO:"+ b + "\n";
+		cadena= cadena +"PRECIO:"+ c + "\n";
+
+		if (c=="") {
+			alert ("Intruduzca un precio");
+		}
+
+		else {
+			alert (cadena);
+
+		}
+	}	
+
+	</script>
+</head>
+<body>
+	<img src="banner7.png" width="800">
+	
+		<table width="800">
+			<tr>
+				<td width="350"> 
+				<table>
+					<tr>
+				<img src="1a.jpg" width="300" height="200"> <br>
+				<img src="2a.jpg" width="300" height="200"> <br>
+				<img src="3a.jpg" width="300" height="200"> <br>
+				</tr>
+				</table>
+				</td>
+
+				<td>
+					<table bgcolor="EFAD4E" width="300" height="60">
+						<tr>
+							<td>
+
+					MARCA </td>
+					<td><select id="MAR">
+
+						<option value="Seat">Seat</option>
+						<option value="Mazda">Mazda</option>
+						<option value="Toyota">Toyota</option>
+						<option value="Mercedes">Mercedes</option>
+					</select> </td>
+					<tr><td> AÑO </td> <td> <input type="number" id="AÑO"> <br> </td></tr>
+					<tr><td>PRECIO </td> <td> <input type="number" id="PRE"> <br> </td></tr>
+
+					<tr><td><input type="button" value="BUSCAR" onClick="buscar()" name="">
+					</td></tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	
+
+</body>
+</html>

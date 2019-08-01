@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function enviar(){
+			var a=document.getElementById("Asunto").value;
+		
+		if (a=="") {
+			alert ("Intruduzca un asunto");
+		}
+
+		else {
+			location.href="http://www.google.com";
+
+		}
+
+	}
+
+	</script>
+	
+</head>
+<body>
+<img src="banner-correo.jpg" width="80%"> <br>	
+
+<table width="50%" align="center">
+
+	<tr><td>Para</td><td><select id="Para">
+
+						<option value="juan">juan@asir.com</option>
+						<option value="pepe">pepe@asir.com</option>
+						<option value="luis">luis@asir.com</option>
+						<option value="manue">manue@asir.com</option>
+					
+					</select> </td></td></tr>
+	<tr><td>Asunto</td><td> <input type="text" id="Asunto" name=""></td></tr>
+	<tr><br><td></td><td><textarea cols="50" rows="10"></textarea></td></tr>
+	<tr><br><td></td><td><input type="button" value="ENVIAR" onClick="enviar()" name=""></td></tr>
+	
+
+</table>
+</body>
+</html>
